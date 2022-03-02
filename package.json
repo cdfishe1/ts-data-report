@@ -23,5 +23,8 @@
   "devDependencies": {
     "concurrently": "^7.0.0",
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.21"
   }
 }
