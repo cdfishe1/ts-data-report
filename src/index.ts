@@ -1,9 +1,9 @@
-import { CsvFileReader } from './CsvFileReader';
+import { MatchReader } from './MatchReader';
 import { MatchResult } from './MatchResult';
 
-const football = new CsvFileReader('football.csv');
+const football = new MatchReader("football.csv");
 football.read();
-console.log(football.data[0])
+
 
 let manUnitedWins = 0;
 
@@ -15,4 +15,4 @@ for (let match of football.data) {
     }
 }
 
-// console.log(`Man United won ${manUnitedWins} games`)
+console.log(`Man United won ${manUnitedWins} games`)

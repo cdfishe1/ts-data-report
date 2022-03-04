@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const CsvFileReader_1 = require("./CsvFileReader");
+const MatchReader_1 = require("./MatchReader");
 const MatchResult_1 = require("./MatchResult");
-const football = new CsvFileReader_1.CsvFileReader('football.csv');
+const football = new MatchReader_1.MatchReader("football.csv");
 football.read();
-console.log(football.data[0]);
 let manUnitedWins = 0;
 for (let match of football.data) {
     if (match[1] === 'Man United' && match[5] === MatchResult_1.MatchResult.HomeWin) {
@@ -14,4 +13,4 @@ for (let match of football.data) {
         manUnitedWins++;
     }
 }
-// console.log(`Man United won ${manUnitedWins} games`)
+console.log(`Man United won ${manUnitedWins} games`);
